@@ -221,7 +221,7 @@ section {
     color: var(--color-white); /* CRITICAL: Text color for the entire section must be white */
     
     /* CSS BACKGROUND IMAGE SETUP */
-    background: url('../images/hero-background.jpg') no-repeat center center; 
+    background: url('Paul2.jpg') no-repeat center center; 
     background-size: cover;
 }
 
