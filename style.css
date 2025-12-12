@@ -199,7 +199,7 @@ section {
     position: relative; /* Essential for positioning the overlay */
     
     /* 1. CSS BACKGROUND IMAGE SETUP */
-    background: url('paul.jpg') no-repeat center center; /* Path to your background image */
+    background: url('Paul.jpg') no-repeat center center; /* Path to your background image */
     background-size: cover;
     color: var(--color-white); /* Change text color to white for contrast against the dark overlay */
 }
