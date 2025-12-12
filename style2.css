@@ -1,0 +1,362 @@
+/* --- VARIABLES & RESET --- */
+:root {
+    --color-primary-dark: #0C0E1C; /* Deep Navy/Near Black */
+    --color-white: #FFFFFF;
+    --color-accent-purple: #673AB7; /* Deep Amethyst for CTAs */
+    --color-accent-blue: #2196F3; /* Medium Blue for highlights/links */
+    --color-light-gray: #F5F5F5;
+    --header-height: 80px; /* Standard height for the sticky header */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional, clean font */
+    line-height: 1.6;
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent-blue);
+    transition: color 0.3s ease;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: var(--color-primary-dark);
+}
+
+/* --- STICKY HEADER --- */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-primary-dark); /* Dark background */
+    z-index: 1000; /* Ensures it stays above all other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-white); /* White logo on dark background */
+}
+
+/* Desktop Navigation */
+.desktop-nav a {
+    margin-left: 25px;
+    font-weight: 500;
+    color: var(--color-white);
+    padding: 5px 0;
+}
+.desktop-nav a:hover {
+    color: var(--color-accent-blue);
+}
+
+/* Mobile Toggle (Hidden on Desktop) */
+.menu-toggle {
+    display: none; /* Default hidden */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--color-white);
+    padding: 10px;
+    z-index: 1100;
+}
+
+/* Mobile Navigation (Hidden by default) */
+.mobile-nav {
+    display: none; /* Initially hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 14, 28, 0.95); /* Semi-transparent dark overlay */
+    padding-top: var(--header-height);
+    z-index: 999;
+    text-align: center;
+}
+.mobile-nav a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.5em;
+    color: var(--color-white);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mobile-nav a:last-child {
+    border-bottom: none;
+}
+.mobile-nav.is-open {
+    display: block;
+}
+
+/* --- CALL TO ACTION BUTTONS (CTAs) --- */
+.cta-button, .cta-button-primary, .cta-button-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+/* Primary Button (Purple) - Used in Hero & Contact CTA */
+.cta-button-primary {
+    background-color: var(--color-accent-purple);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent-purple);
+}
+.cta-button-primary:hover {
+    background-color: #5831a2; /* Slightly darker purple on hover */
+    color: var(--color-white);
+}
+.cta-button-primary:active { /* Click/Tap effect */
+    transform: scale(0.98);
+    background-color: var(--color-accent-blue); /* Quick color switch on click */
+}
+
+/* Secondary Button (Dark/Outline) - Used in Navigation and other sections */
+.cta-button { /* In Header Nav */
+    background-color: var(--color-accent-blue);
+    color: var(--color-white);
+}
+.cta-button-secondary { /* Used in Services Highlight */
+    background-color: transparent;
+    color: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-dark);
+}
+.cta-button-secondary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+
+/* --- LAYOUTS & CONTAINERS --- */
+main {
+    padding-top: 0; /* Content starts right after header */
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 300; /* Light weight for a minimalist look */
+}
+
+
+/* --- HERO SECTION STYLING (Dual Column) --- */
+.hero-section {
+    padding: 100px 20px;
+    /* Use a subtle background color change or pattern if desired, otherwise keep white */
+}
+
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 3; /* 60% width */
+}
+
+.hero-text h1 {
+    font-size: 4em;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+}
+
+.hero-text h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 2; /* 40% width */
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px; /* Soft edges for professionalism */
+    /* Optional: subtle shadow for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* --- HORIZONTAL SCROLL GALLERY --- */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: scroll; /* Enables the horizontal scrolling */
+    padding-bottom: 20px; /* Space for the scroll bar */
+    gap: 20px; /* Space between images */
+    /* Hide scrollbar on certain browsers for a cleaner look */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.gallery-item {
+    flex-shrink: 0; /* Prevents items from shrinking */
+    width: 300px; /* Fixed width for consistent display */
+    height: 200px; /* Fixed height for consistent display */
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Image as button effect - Responds when touched/tapped */
+.gallery-item:hover, .gallery-item:focus {
+    transform: scale(1.05); /* Bolder/larger effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the frame without distortion */
+}
+
+
+/* --- SERVICES HIGHLIGHT (3-Column Grid) --- */
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.service-card {
+    padding: 30px;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+}
+
+.section-cta {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* --- FINAL CONTACT CTA BLOCK --- */
+.contact-cta-block {
+    text-align: center;
+    background-color: var(--color-light-gray); /* Subtle background for distinction */
+}
+.contact-cta-block .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* --- FOOTER STYLING (Responsive Grid) --- */
+.main-footer {
+    background-color: var(--color-primary-dark); /* Deep Navy background */
+    color: var(--color-white);
+    padding: 60px 20px 40px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on wide screens */
+    gap: 40px;
+}
+
+.footer-logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-links li, .contact-details li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.footer-links a, .contact-details a {
+    color: var(--color-light-gray);
+}
+.footer-links a:hover, .contact-details a:hover {
+    color: var(--color-accent-blue); /* Hover effect */
+}
+
+/* --- MOBILE RESPONSIVENESS (Media Query) --- */
+@media (max-width: 768px) {
+    /* Header/Navigation */
+    .desktop-nav {
+        display: none; /* Hide desktop nav */
+    }
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    /* Hero Section (Stacking) */
+    .hero-content-wrapper {
+        flex-direction: column; /* Stack columns vertically */
+        text-align: center;
+    }
+    .hero-image {
+        order: 2; /* Image moves below the text (as planned) */
+        text-align: center;
+        margin-top: 40px;
+    }
+    .hero-text {
+        order: 1;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+    .hero-text h2 {
+        font-size: 1.2em;
+    }
+    
+    /* Services Grid (Stacking) */
+    .service-cards-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    
+    /* Footer (Stacking and Centering) */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Single column */
+        text-align: center; /* Center footer content */
+    }
+    .branding-col, .links-col, .contact-col, .social-col {
+        margin-bottom: 30px;
+    }
+}

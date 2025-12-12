@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Request Form | PEM Studio</title>
+    <link rel="icon" type="image/png" href="pem.png"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+ <header class="sticky-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                PEM Studio 
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="graphics.html">Gallery</a>
+                <a href="contact.html" class="cta-button">Start Project</a>
+            </nav>
+
+            <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">
+                </button>
+        </div>
+    </header>
+    
+    <nav id="mobile-nav" class="mobile-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="graphics.html">Gallery</a>
+        <a href="contact.html">Start Project</a>
+        </nav>
+
+    <main>
+        
+        <section class="page-banner">
+                 <div class="special-content-box">
+            <h1>Start Your Project</h1>
+            <p>Please select your desired graphic service below to open the dedicated brief form.</p>
+            </div>
+        </section>
+        
+           <div class="rainbow-divider"></div> 
+
+        <section class="request-form-section">
+                 <div class="special-content-box">
+            <h2 class="section-title">Select Design Choice:</h2>
+            
+            <div class="service-selector">
+                <select id="design-select">
+                    <option value="">-- Choose Your Service --</option>
+                    <option value="logo">Logo Design</option>
+                    <option value="flyer">Flyer Design</option>
+                    <option value="poster">Poster Design</option>
+                    <option value="sticker">Sticker Design</option>
+                    <option value="web">Web Development Inquiry</option>
+                </select>
+                
+                <p class="dev-note">
+                    <strong>For Web Development inquiries, please note this primarily focuses on graphics. A dedicated developer link will be provided.</strong>
+                </p>
+                </div>
+            </div>
+            
+            <form action="[Your Formspree Link]" method="POST" id="logo-form" class="design-form hidden">
+                <h3>Logo Design Request</h3>
+                <input type="hidden" name="_next" value="/thankyou.html" />
+                
+                <label for="logo_name">Your Full Name:</label>
+                <input type="text" id="logo_name" name="Full Name" required>
+                
+                <label for="logo_email">Your Email Address:</label>
+                <input type="email" id="logo_email" name="Email Address" required>
+                
+                <label for="brand_name">Brand Name:</label>
+                <input type="text" id="brand_name" name="Brand Name" required>
+                
+                <label for="tagline">Tagline (Optional):</label>
+                <input type="text" id="tagline" name="Tagline">
+                
+                <label for="logo_color">Brand Color Choices (Hex codes or descriptions):</label>
+                <input type="text" id="logo_color" name="Brand Color Choices" required>
+                
+                <label for="logo_bg">Background Color (e.g., White, Transparent):</label>
+                <input type="text" id="logo_bg" name="Background Color" required>
+                
+                <label for="elements">Preferred Elements or Figures (Describe any symbols/style):</label>
+                <textarea id="elements" name="Preferred Elements" rows="4" required></textarea>
+                
+                <button type="submit" class="cta-button-primary">Submit Logo Request</button>
+            </form>
+
+            <form action="[Your Formspree Link]" method="POST" id="flyer-form" class="design-form hidden">
+                <h3>Flyer Design Request</h3>
+                <input type="hidden" name="_next" value="/thankyou.html" />
+                
+                <label for="flyer_name">Your Full Name:</label>
+                <input type="text" id="flyer_name" name="Full Name" required>
+                
+                <label for="flyer_email">Your Email Address:</label>
+                <input type="email" id="flyer_email" name="Email Address" required>
+
+                <label for="flyer_details">Flyer Details / Content:</label>
+                <textarea id="flyer_details" name="Flyer Content Details" rows="6" placeholder="Please include event details, dates, prices, and required text." required></textarea>
+                
+                <label for="flyer_phone">Phone Number to Include:</label>
+                <input type="tel" id="flyer_phone" name="Phone Number">
+                
+                <label for="flyer_social">Social Media Handles to Include:</label>
+                <input type="text" id="flyer_social" name="Social Media Handles">
+
+                <label for="flyer_size">Preferred Size/Orientation (A5, A4, Digital):</label>
+                <input type="text" id="flyer_size" name="Flyer Size" required>
+                
+                <button type="submit" class="cta-button-primary">Submit Flyer Request</button>
+            </form>
+
+            <form action="[Your Formspree Link]" method="POST" id="poster-form" class="design-form hidden">
+                <h3>Poster Design Request</h3>
+                <input type="hidden" name="_next" value="/thankyou.html" />
+                
+                <p>[Place Full Name, Email, Content, Contact/Social, and Size fields here]</p>
+                
+                <button type="submit" class="cta-button-primary">Submit Poster Request</button>
+            </form>
+
+            <form action="[Your Formspree Link]" method="POST" id="sticker-form" class="design-form hidden">
+                <h3>Sticker Design Request</h3>
+                <input type="hidden" name="_next" value="/thankyou.html" />
+                
+                <p>[Place Full Name, Email, Brand/Product, Shape, and Size fields here]</p>
+                
+                <button type="submit" class="cta-button-primary">Submit Sticker Request</button>
+            </form>
+            
+        </section>
+
+    </main>
+ <footer class="main-footer">
+        <div class="footer-grid">
+            
+            <div class="footer-col branding-col">
+                <a href="index.html" class="footer-logo-image-link">
+                    <img src="pemlogo.png" alt="PEM Studio Logo" class="footer-logo-icon-only">
+                </a>
+                <p class="motto">Designs that inspires | High quality graphics. Building Digital Presence.</p>
+                <p class="copyright">&copy; 2025 PEM Studio. All rights reserved.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Paul</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="graphics.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact/Request</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Get In Touch</h3>
+                <ul class="contact-details">
+                    <li>Phone: <a href="tel:+2348161202291">08161202291</a></li>
+                    <li>Email: <a href="mailto:youremail@pemstudio.com">youremail@pemstudio.com</a></li>
+                    <li>Location: Lagos, Nigeria</li>
+                </ul>
+            </div>
+
+         <div class="footer-col social-col">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="[Your LinkedIn Link]" aria-label="LinkedIn" class="social-icon-link"><i class="fab fa-linkedin"></i></a>
+                    
+                    <a href="[Your Instagram Link]" aria-label="Instagram" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+                    
+                    <a href="[Your Facebook Link]" aria-label="Facebook" class="social-icon-link"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="[Your YouTube Link]" aria-label="YouTube" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+
+                    <a href="https://wa.me/2348161202291" aria-label="WhatsApp" class="social-icon-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+    <script src="form.js"></script> </body>
+</html>

@@ -1,0 +1,743 @@
+/* --- VARIABLES & RESET (UPDATED) --- */
+:root {
+    --color-white: #FFFFFF;
+    --color-accent-purple: #673AB7; /* Deep Amethyst for CTAs */
+    --color-accent-blue: #2196F3; /* Medium Blue for highlights/links */
+    --color-light-gray: #F5F5F5;
+
+    /* NEW: Professional Rainbow Gradient Blend */
+    --color-rainbow-gradient: linear-gradient(
+        90deg, 
+        #9B59B6 0%,  /* Amethyst/Purple */
+        #3498DB 25%, /* Blue */
+        #2ECC71 50%, /* Green */
+        #F1C40F 75%, /* Yellow/Gold */
+        #E74C3C 100% /* Red/Coral */
+    );
+
+    --header-height: 80px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Updated font stack to prioritize Playfair Display for headers and keep a clean sans-serif for body */
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    line-height: 1.6;
+    background-color: var(--color-white);
+    color: #333; 
+}
+
+/* Use Playfair Display for all main headings/titles for high impact */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent-blue);
+    transition: color 0.3s ease;
+}
+
+/* --- STICKY HEADER (RAINBOW) --- */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: var(--color-rainbow-gradient); 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling - Applied to both Header and Footer */
+.logo-link, .footer-logo {
+    font-family: 'Playfair Display', serif; /* Use the elegant serif font */
+    font-size: 1.8em;
+    font-weight: 900; /* Boldest weight for impact */
+    color: var(--color-white); 
+    /* SHADOW EFFECT ADDED HERE */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Professional, dark shadow */
+    transition: text-shadow 0.3s ease;
+}
+
+.logo-link:hover, .footer-logo:hover {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.5); /* Subtle glowing effect on hover */
+}
+
+
+/* Desktop Navigation */
+.desktop-nav a {
+    margin-left: 25px;
+    font-weight: 500;
+    color: var(--color-white);
+    padding: 5px 0;
+}
+.desktop-nav a:hover {
+    color: var(--color-light-gray); 
+}
+
+/* Mobile Toggle */
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--color-white);
+    padding: 10px;
+    z-index: 1100;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-rainbow-gradient); 
+    padding-top: var(--header-height);
+    z-index: 999;
+    text-align: center;
+}
+.mobile-nav a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.5em;
+    color: var(--color-white);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mobile-nav a:last-child {
+    border-bottom: none;
+}
+.mobile-nav.is-open {
+    display: block;
+}
+
+/* --- CALL TO ACTION BUTTONS (CTAs) --- */
+.cta-button, .cta-button-primary, .cta-button-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+/* Primary Button (Purple) */
+.cta-button-primary {
+    background-color: var(--color-accent-purple);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent-purple);
+}
+.cta-button-primary:hover {
+    background-color: #5831a2; 
+    color: var(--color-white);
+}
+.cta-button-primary:active { 
+    transform: scale(0.98);
+    background-color: var(--color-accent-blue); 
+}
+
+/* Secondary Button (Dark/Outline) */
+.cta-button { /* In Header Nav */
+    background-color: var(--color-accent-blue);
+    color: var(--color-white);
+}
+.cta-button-secondary { /* Used in Services Highlight */
+    background-color: transparent;
+    color: #111; 
+    border: 2px solid #111; 
+}
+.cta-button-secondary:hover {
+    background-color: #111;
+    color: var(--color-white);
+}
+
+
+/* --- LAYOUTS & CONTAINERS --- */
+main {
+    padding-top: 0; 
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700; /* Use Playfair Bold */
+}
+
+/* --- HERO SECTION STYLING (Dual Column with CSS Background & Overlay) --- */
+.hero-section {
+    padding: 100px 20px;
+    position: relative; /* Essential for positioning the overlay */
+    
+    /* 1. CSS BACKGROUND IMAGE SETUP */
+    background: url('paul.jpg') no-repeat center center; /* Path to your background image */
+    background-size: cover;
+    color: var(--color-white); /* Change text color to white for contrast against the dark overlay */
+}
+
+/* Create the Overlay layer using a pseudo-element */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle Dark Overlay (e.g., 80% opaque dark gray) */
+    background-color: rgba(0, 0, 0, 0.75); 
+    z-index: 1; /* Place overlay behind the content but over the image */
+}
+
+/* Ensure content and image sit above the overlay */
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative; /* Bring content above the overlay */
+    z-index: 2;
+}
+
+/* Update text colors within the hero to white for the new dark background */
+.hero-text h1, .hero-text h2 {
+    color: var(--color-white);
+}
+
+/* Foreground portrait image adjustment (optional, but good practice) */
+.hero-image img {
+    /* Keep existing styling (max-width, border-radius, shadow) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on the portrait for better pop */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+}
+
+
+/* --- HORIZONTAL SCROLL GALLERY --- */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: scroll; 
+    padding-bottom: 20px; 
+    gap: 20px; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.gallery-item {
+    flex-shrink: 0; 
+    width: 300px; 
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover, .gallery-item:focus {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+/* --- SERVICES HIGHLIGHT (3-Column Grid) --- */
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.service-card {
+    padding: 30px;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+}
+
+.section-cta {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* --- FINAL CONTACT CTA BLOCK --- */
+.contact-cta-block {
+    text-align: center;
+    background-color: var(--color-light-gray); 
+}
+.contact-cta-block .subtitle {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* --- FOOTER STYLING (RAINBOW) --- */
+.main-footer {
+    background: var(--color-rainbow-gradient); 
+    color: var(--color-white);
+    padding: 60px 20px 40px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px;
+}
+
+.footer-links li, .contact-details li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.footer-links a, .contact-details a {
+    color: var(--color-light-gray);
+}
+.footer-links a:hover, .contact-details a:hover {
+    color: var(--color-white); 
+}
+
+/* --- MOBILE RESPONSIVENESS (Media Query) --- */
+@media (max-width: 768px) {
+    /* Header/Navigation */
+    .desktop-nav {
+        display: none; 
+    }
+    .menu-toggle {
+        display: block; 
+    }
+
+    /* Hero Section (Stacking) */
+    .hero-content-wrapper {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .hero-image {
+        order: 2; 
+        text-align: center;
+        margin-top: 40px;
+    }
+    .hero-text {
+        order: 1;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+    .hero-text h2 {
+        font-size: 1.2em;
+    }
+    
+    /* Services Grid (Stacking) */
+    .service-cards-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Footer (Stacking and Centering) */
+    .footer-grid {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
+    .branding-col, .links-col, .contact-col, .social-col {
+        margin-bottom: 30px;
+    }
+}
+
+/* --- Social Icon Styling (For Footer - CUSTOM CIRCLE LOOK) --- */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons on mobile */
+    gap: 10px; /* Closer spacing for the circles */
+}
+
+.social-icon-link {
+    display: flex; /* Use flexbox to center the icon inside the circle */
+    justify-content: center;
+    align-items: center;
+    
+    width: 40px; /* Size of the circle */
+    height: 40px; /* Size of the circle */
+    border-radius: 50%; /* Makes it a perfect circle */
+    
+    background-color: var(--color-white); /* White Circle Background */
+    color: #333; /* Dark icon color inside the white circle */
+    font-size: 1.1em; /* Size of the icon letter/logo */
+    
+    transition: all 0.3s ease;
+}
+
+.social-icon-link:hover {
+    transform: scale(1.1); /* Subtle grow effect on hover */
+    background-color: var(--color-accent-blue); /* Hover changes circle to the accent blue */
+    color: var(--color-white); /* Icon becomes white on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure icons stack nicely on wider screens where the footer columns are left-aligned */
+@media (min-width: 769px) {
+    .footer-col.social-col {
+        text-align: left; /* Align to the left on desktop grid */
+    }
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+/* --- New CSS for Image-Only Footer Logo --- */
+.footer-logo-image-link {
+    display: block; /* Make the link take up full width for easy clicking */
+    margin-bottom: 10px;
+}
+
+.footer-logo-icon-only {
+    height: 50px; /* Slightly larger image for visual prominence in the footer */
+    width: auto;
+    /* Remove any previous text alignment issues */
+    vertical-align: middle; 
+}
+
+/* Ensure centering on mobile */
+@media (max-width: 768px) {
+    .footer-col.branding-col {
+        text-align: center;
+    }
+    .footer-logo-image-link {
+        margin: 0 auto 10px auto; /* Center the link block on mobile */
+        display: inline-block; /* Helps centering */
+    }
+}
+
+/* Remove text-based footer logo styling as it's no longer used */
+.footer-logo {
+    /* Existing styling for the text-based logo is no longer needed/used in this column */
+    display: none; 
+}
+
+/* --- ABOUT PAGE STYLING --- */
+.page-banner {
+    text-align: center;
+    padding: 60px 20px;
+}
+.page-banner h1 {
+    font-size: 3em;
+}
+
+.bio-section {
+    padding: 80px 20px;
+}
+.bio-content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.bio-image-col {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+.full-bio-portrait {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bio-text-col {
+    flex: 2;
+}
+
+@media (max-width: 768px) {
+    .bio-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bio-image-col {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    .bio-text-col {
+        order: 2;
+    }
+}
+
+/* --- SERVICES PAGE STYLING --- */
+.service-packages {
+    text-align: center;
+}
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.package-card {
+    padding: 30px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.package-card h3 {
+    color: var(--color-accent-purple);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.package-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 30px;
+}
+
+.package-card ul li {
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #444;
+}
+
+.package-card ul li i {
+    color: var(--color-accent-blue);
+    margin-right: 8px;
+}
+
+/* Featured package to make it stand out */
+.featured-package {
+    background-color: var(--color-light-gray);
+    border: 2px solid var(--color-accent-purple);
+}
+
+/* --- GALLERY PAGE STYLING --- */
+.full-gallery {
+    padding-top: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Responsive Grid: 3 columns on desktop, adapts down to 2, then 1 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: block; /* Ensures the whole card is the link */
+}
+
+/* Bolder when touched/hovered effect */
+.gallery-card:hover, .gallery-card:focus {
+    transform: scale(1.03); 
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay for text/download icon */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(103, 58, 183, 0.85); /* Purple overlay */
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Allows the link on the card to be clicked */
+}
+
+.gallery-card:hover .overlay {
+    opacity: 1; /* Show overlay on hover/touch */
+    pointer-events: auto; /* Allow interaction with elements inside overlay if needed */
+}
+
+.overlay p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.overlay i {
+    font-size: 2em;
+}
+
+.gallery-note {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    color: #555;
+}
+
+/* --- CONTACT PAGE STYLING --- */
+.request-form-section {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.service-selector {
+    margin-bottom: 40px;
+}
+
+#design-select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid var(--color-accent-purple);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.dev-note {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Forms Styling */
+.design-form {
+    background-color: var(--color-light-gray);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.design-form h3 {
+    text-align: center;
+    color: var(--color-accent-purple);
+    margin-bottom: 30px;
+}
+
+.design-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.design-form input[type="text"],
+.design-form input[type="email"],
+.design-form input[type="tel"],
+.design-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.design-form textarea {
+    resize: vertical;
+}
+
+.design-form button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Class to hide forms via JS */
+.hidden {
+    display: none;
+}
+
+/* --- Special Content Box Styling --- */
+.special-content-box {
+    padding: 30px;
+    background-color: var(--color-light-gray); /* Light gray background */
+    border-radius: 8px;
+    margin-bottom: 25px; /* Space below the box */
+    border-left: 5px solid var(--color-accent-purple); /* A purple accent line for definition */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.special-content-box h2, .special-content-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* --- Rainbow Section Divider Styling --- */
+.rainbow-divider {
+    width: 100%; /* Full width */
+    height: 8px; /* Slightly thinner for elegance */
+    background: var(--color-rainbow-gradient); /* Use the defined rainbow gradient */
+    margin: 60px 0; /* Generous vertical spacing for separation on desktop */
+    border: none;
+}
+
+/* Ensures the divider spans full width even if sections are limited */
+main > .rainbow-divider {
+    max-width: none; /* Override max-width of the main container */
+    padding: 0;
+}
+
+/* **NEW: Specific mobile adjustment for section dividers** */
+@media (max-width: 768px) {
+    .rainbow-divider {
+        margin: 40px 0; /* Reduce spacing slightly on mobile */
+    }
+}
