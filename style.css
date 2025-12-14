@@ -62,7 +62,7 @@ a {
     top: 0;
     width: 100%;
     height: var(--header-height);
-    background: var(--color-blue); 
+    background: var(--accent-blue); 
     z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
