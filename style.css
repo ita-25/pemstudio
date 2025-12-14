@@ -237,35 +237,6 @@ section {
 }
 
 /* Ensure content and image sit above the overlay */
-.hero-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    position: relative; 
-    z-index: 2;
-}
-
-.hero-text h1 {
-    font-size: 4em; /* Larger hero text */
-    font-weight: 900; 
-    color: var(--color-white);
-}
-
-.hero-text h2 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Use body font for subheader */
-    font-size: 1.5em;
-    font-weight: 300;
-    margin-bottom: 30px;
-    color: var(--color-white); 
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
-}
-
 /* --- HERO SECTION STYLING (Add shadow to wrapper) --- */
 .hero-content-wrapper {
     display: flex;
@@ -290,6 +261,28 @@ section {
         /* background-color: transparent; */ 
     }
 }
+
+.hero-text h1 {
+    font-size: 4em; /* Larger hero text */
+    font-weight: 900; 
+    color: var(--color-white);
+}
+
+.hero-text h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Use body font for subheader */
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: var(--color-white); 
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+}
+
 
 
 
