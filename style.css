@@ -237,30 +237,11 @@ section {
 }
 
 /* Ensure content and image sit above the overlay */
-/* --- HERO SECTION STYLING (Add shadow to wrapper) --- */
-.hero-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    position: relative; 
-    z-index: 2;
-
-    /* NEW: FLOATING EFFECT */
-    padding: 30px; /* Crucial: Creates space between content and shadow edge */
-    background-color: rgba(255, 255, 255, 0.1); /* Very subtle light background to lift it */
-    border-radius: 8px;
-    /* Soft, diffused shadow for a floating effect */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); 
-}
-
-/* Also ensure the content wrapper collapses cleanly on mobile */
-@media (max-width: 768px) {
+/* Hero Section (Stacking) */
     .hero-content-wrapper {
-        padding: 20px; /* Reduce padding on mobile */
-        /* You might want to remove the subtle background on mobile if it looks too cluttered */
-        /* background-color: transparent; */ 
+        flex-direction: column; 
+        text-align: center;
     }
-}
 
 .hero-text h1 {
     font-size: 4em; /* Larger hero text */
