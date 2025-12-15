@@ -8,20 +8,34 @@
 
 /* --- VARIABLES & RESET (Update these lines) --- */
 :root {
-    --color-white: #FFFFFF;
-    --color-accent-purple: #4527A0; /* NEW: Darker Indigo for CTAs and accents */
+    /* Base Colors - LIGHT MODE */
+    --color-bg-primary: #FFFFFF;        /* Main body background (White) */
+    --color-bg-secondary: #F0F2F5;    /* Section/Card background (Light Gray) */
+    --color-text-primary: #111;         /* Headings/Strong text (Near Black) */
+    --color-text-secondary: #444;       /* Body text (Soft Black) */
+    --color-border-subtle: #DCDCDC;     /* Light borders */
+    
+    /* ACCENTS - Kept same for both modes (for contrast) */
+    --color-accent-purple: #4527A0; 
     --color-accent-blue: #2196F3; 
-    --color-light-gray: #F0F2F5; 
-
-    /* NEW: Professional Tech-Graphics Gradient */
-    --color-rainbow-gradient: linear-gradient(
+    
+    /* Professional Tech-Graphics Gradient for Header/Footer (Deep Navy to Indigo) */
+    --color-header-footer-bg: linear-gradient(
         90deg, 
         #1A237E 0%, /* Deep Navy Blue (Tech/Developer) */
-        #512DA8 50%, /* Middle Royal Purple */
-        #4527A0 100% /* Deep Indigo (Creative/Graphics) */
+        #512DA8 100% /* Deep Indigo (Creative/Graphics) */
     );
 
     --header-height: 80px; 
+}
+
+/* --- DARK MODE OVERRIDES (ADD THIS BLOCK) --- */
+body.dark-mode {
+    --color-bg-primary: #121212;        /* Darkest gray background */
+    --color-bg-secondary: #1E1E1E;      /* Slightly lighter gray for sections/cards */
+    --color-text-primary: #F5F5F5;      /* Near-white for headings */
+    --color-text-secondary: #B0B0B0;    /* Light gray for body text */
+    --color-border-subtle: #333333;     /* Dark borders/dividers */
 }
 
 /* ... rest of the CSS ... */
@@ -42,11 +56,11 @@
 
 /* Global Body and Font Stack Update for Modern Look */
 body {
-    /* Changed font stack for a cleaner, modern look (using system fonts for sharpness) */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    line-height: 1.7; /* INCREASED line-height for better readability (modern aesthetic) */
-    background-color: var(--color-white);
-    color: #444; /* Softened text color for a modern, less harsh feel */
+    /* Using new variables for color switching */
+    font-family: 'Playfair Display', serif; /* **REVERTED to Playfair Display as requested by user** */
+    line-height: 1.7; 
+    background-color: var(--color-bg-primary); /* Use variable */
+    color: var(--color-text-secondary);        /* Use variable */
     font-size: 16px;
 }
 
@@ -55,7 +69,7 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     line-height: 1.2;
     margin-bottom: 0.5em;
-    color: #111;
+    color: var(--color-text-primary); /* Use variable */
 }
 
 a {
@@ -64,15 +78,27 @@ a {
     transition: color 0.3s ease;
 }
 
-/* --- STICKY HEADER (RAINBOW) --- */
+/* --- STICKY HEADER (DARK GRADIENT & PROGRESS BAR CONTAINER) --- */
 .sticky-header {
     position: sticky;
     top: 0;
     width: 100%;
     height: var(--header-height);
-    background: var(--color-rainbow-gradient); 
+    background: var(--color-header-footer-bg); /* New dark gradient */
     z-index: 1000; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Improved visibility */
+}
+
+/* --- SCROLL PROGRESS BAR (ADD THIS BLOCK) --- */
+#progress-bar {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the sticky header */
+    left: 0;
+    width: 0%; /* Initial width set by JavaScript */
+    height: 4px; /* Thin bar */
+    background-color: var(--color-accent-blue); /* High-contrast accent color */
+    z-index: 1001; /* Must be above the header */
+    transition: width 0.1s linear; /* Smooth fill */
 }
 
 .header-content {
@@ -236,14 +262,13 @@ section {
     z-index: 1; 
 }
 
-/* Ensure content and image sit above the overlay */
-/* --- HERO SECTION STYLING (Add shadow to wrapper) --- */
 .hero-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    position: relative; 
-    z-index: 2;
+    /* ... existing properties ... */
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly less translucent */
+    border-radius: 8px;
+    /* IMPROVED: More visible shadow for floating effect */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7); /* Deeper, more spread shadow */
+}
 
     /* NEW: FLOATING EFFECT */
     padding: 30px; /* Crucial: Creates space between content and shadow edge */
@@ -338,8 +363,8 @@ section {
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-8px); /* Increased lift */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Deeper, more visible shadow */
 }
 
 
@@ -360,13 +385,12 @@ section {
     color: #444;
 }
 
-/* --- FOOTER STYLING (RAINBOW) --- */
+/* --- FOOTER STYLING (DARK GRADIENT) --- */
 .main-footer {
-    background: var(--color-rainbow-gradient); 
+    background: var(--color-header-footer-bg); /* New dark gradient */
     color: var(--color-white);
     padding: 60px 20px 40px;
 }
-
 .footer-grid {
     max-width: 1100px; /* Aligned with main content width */
     margin: 0 auto;
