@@ -814,3 +814,43 @@ main > .rainbow-divider {
         margin-bottom: 30px;
     }
 }
+
+/* --- THANK YOU PAGE STYLING --- */
+.thank-you-section {
+    padding: 150px 20px; /* Extra padding to center content vertically */
+    text-align: center;
+    min-height: 80vh; /* Ensure it takes up most of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.success-icon {
+    font-size: 5em;
+    color: var(--color-accent-purple);
+    margin-bottom: 20px;
+}
+
+.thank-you-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.thank-you-content h2 {
+    font-family: 'Playfair Display', serif; /* Ensures the subtitle uses the same font */
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.thank-you-cta-group {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
