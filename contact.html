@@ -121,21 +121,65 @@
 
             <form action="[Your Formspree Link]" method="POST" id="poster-form" class="design-form hidden">
                 <h3>Poster Design Request</h3>
-                <input type="hidden" name="_next" value="/thankyou.html" />
+    <input type="hidden" name="_next" value="/thankyou.html" />
                 
-                <p>[Place Full Name, Email, Content, Contact/Social, and Size fields here]</p>
-                
-                <button type="submit" class="cta-button-primary">Submit Poster Request</button>
-            </form>
+               <label for="poster-name">Your Full Name:</label>
+    <input type="text" id="poster-name" name="name" required>
+
+    <label for="poster-email">Email Address:</label>
+    <input type="email" id="poster-email" name="email" required>
+
+    <label for="poster-phone">Phone Number (Optional):</label>
+    <input type="tel" id="poster-phone" name="phone">
+
+    <label for="poster-size">Required Size/Dimensions (e.g., A3, 11x17 in):</label>
+    <input type="text" id="poster-size" name="size" required>
+
+    <label for="poster-purpose">Poster Purpose (e.g., Event, Product Launch, Wall Art):</label>
+    <input type="text" id="poster-purpose" name="purpose" required>
+
+    <label for="poster-content">Key Text/Headlines to Include:</label>
+    <textarea id="poster-content" name="content" rows="4" placeholder="Briefly list the required text, dates, and contact info."></textarea>
+
+    <label for="poster-style">Preferred Style/Mood (e.g., Minimalist, Vintage, Abstract):</label>
+    <input type="text" id="poster-style" name="style">
+    
+    <label for="poster-assets">Links to necessary assets (Logo, Photos, Brand Guidelines):</label>
+    <textarea id="poster-assets" name="assets" rows="3" placeholder="Google Drive, Dropbox, or live website links."></textarea>
+
+    <label for="poster-timeline">Required Deadline:</label>
+    <input type="text" id="poster-timeline" name="timeline">
+    
+    <button type="submit" class="cta-button-primary">Submit Poster Request</button>
+</form>
 
             <form action="[Your Formspree Link]" method="POST" id="sticker-form" class="design-form hidden">
                 <h3>Sticker Design Request</h3>
                 <input type="hidden" name="_next" value="/thankyou.html" />
                 
-                <p>[Place Full Name, Email, Brand/Product, Shape, and Size fields here]</p>
-                
-                <button type="submit" class="cta-button-primary">Submit Sticker Request</button>
-            </form>
+                <label for="sticker-name">Your Full Name:</label>
+    <input type="text" id="sticker-name" name="name" required>
+
+    <label for="sticker-email">Email Address:</label>
+    <input type="email" id="sticker-email" name="email" required>
+
+    <label for="sticker-quantity">Estimated Quantity/Order Size:</label>
+    <input type="text" id="sticker-quantity" name="quantity" required placeholder="e.g., 500 units, 1000 units">
+
+    <label for="sticker-shape">Desired Shape (e.g., Die-cut, Circle, Square, Kiss-cut):</label>
+    <input type="text" id="sticker-shape" name="shape" required>
+
+    <label for="sticker-dimensions">Maximum Size/Dimensions (e.g., 3 x 3 inches, 8cm wide):</label>
+    <input type="text" id="sticker-dimensions" name="dimensions" required>
+    
+    <label for="sticker-style">Design Details/Concept:</label>
+    <textarea id="sticker-style" name="style" rows="4" placeholder="Describe the design concept, colors, and any text to be included."></textarea>
+    
+    <label for="sticker-material">Intended Use/Material (e.g., Water bottle, Laptop decal, Packaging sticker):</label>
+    <input type="text" id="sticker-material" name="material">
+
+    <button type="submit" class="cta-button-primary">Submit Sticker Request</button>
+</form>
             
         </section>
 
