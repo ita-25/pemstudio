@@ -790,3 +790,81 @@ main > .rainbow-divider {
         margin-bottom: 30px;
     }
 }
+
+
+/* --- THANK YOU PAGE STYLING (MODERN & DARK MODE READY) --- */
+
+/* Ensures the thank you content is vertically and horizontally centered */
+.thank-you-section {
+    padding: 100px 20px; /* Generous padding for vertical whitespace */
+    text-align: center;
+    min-height: calc(100vh - var(--header-height) - 100px); /* Ensures it fills the screen minus header/footer */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+.thank-you-content {
+    max-width: 650px; /* Slightly wider content area */
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--color-bg-secondary); /* Use secondary background color (light or dark gray) */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft, professional shadow */
+}
+
+/* Icon Styling (Prominent Checkmark) */
+.success-icon {
+    font-size: 5em;
+    /* Use the accent color for a punch of success visual */
+    color: var(--color-accent-blue); 
+    margin-bottom: 25px;
+    display: block; /* Ensures it takes full width for centering */
+}
+
+.thank-you-content h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--color-text-primary); /* Primary text color (switches with mode) */
+    margin-bottom: 15px;
+}
+
+.thank-you-content h2 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.4em;
+    font-weight: 400;
+    color: var(--color-text-secondary); /* Secondary text color (switches with mode) */
+    margin-bottom: 30px;
+}
+
+.thank-you-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 40px;
+}
+
+/* Grouping the Call-to-Action buttons */
+.thank-you-cta-group {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 500px) {
+    .thank-you-content {
+        padding: 25px;
+    }
+    .thank-you-content h1 {
+        font-size: 2em;
+    }
+    .thank-you-cta-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cta-button-primary, .cta-button-secondary {
+        width: 100%; /* Full width buttons on small screen */
+    }
+}
