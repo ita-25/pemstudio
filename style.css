@@ -469,7 +469,7 @@ section {
 .banner-text h1 {
     font-size: 4em; /* Larger hero text */
     font-weight: 900; 
-    color: var(--color-accent-blue);
+    color: var(--color-accent-purple);
 }
 
 .banner-text p {
@@ -477,7 +477,7 @@ section {
     font-size: 1.5em;
     font-weight: 300;
     margin-bottom: 30px;
-    color: var(--color-accent-blue); 
+    color: var(--color-accent-purple); 
 }
 
 .bio-section {
