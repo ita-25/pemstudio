@@ -466,6 +466,20 @@ section {
     font-size: 3em;
 }
 
+.banner-text h1 {
+    font-size: 4em; /* Larger hero text */
+    font-weight: 900; 
+    color: var(--color-navy);
+}
+
+.banner-text p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Use body font for subheader */
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: var(--color-navy); 
+}
+
 .bio-section {
     padding: 80px 20px;
 }
