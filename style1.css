@@ -45,7 +45,7 @@ body {
     /* Changed font stack for a cleaner, modern look (using system fonts for sharpness) */
     font-family: 'Playfair Display', serif;
     line-height: 1.7; /* INCREASED line-height for better readability (modern aesthetic) */
-    background-color: var(--color-rainbow-gradient);
+    background-color: var(--color-accent-purple);
     color: #444; /* Softened text color for a modern, less harsh feel */
     font-size: 16px;
 }
