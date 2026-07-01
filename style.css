@@ -277,10 +277,10 @@ section {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
-    border-radius: 6px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+    border-radius: 5px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
 }
 
 
