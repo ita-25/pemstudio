@@ -274,7 +274,7 @@ section {
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 30px;
-    color: var(--color-black); 
+    color: #f4f4f4; 
 }
 
 .hero-image img {
