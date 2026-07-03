@@ -248,7 +248,7 @@ section {
 
     /* NEW: FLOATING EFFECT */
     padding: 30px; /* Crucial: Creates space between content and shadow edge */
-    background-color: rgba(255, 255, 255, 0.2); /* Very subtle light background to lift it */
+    background-color: rgba(255, 255, 255, 0.1); /* Very subtle light background to lift it */
     border-radius: 8px;
     /* Soft, diffused shadow for a floating effect */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
@@ -272,7 +272,7 @@ section {
 .hero-text h2 {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Use body font for subheader */
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 30px;
     color: #f4f4f4; 
 }
