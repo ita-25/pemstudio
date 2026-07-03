@@ -221,7 +221,7 @@ section {
     color: var(--color-white); 
 
     /* 1. CSS BACKGROUND IMAGE SETUP */
-    background: url('pemstudz2.png') no-repeat center center; 
+    background: url('pemstudiowallpaper.jpg') no-repeat center center; 
     background-size: cover;
 }
 
@@ -233,7 +233,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for better contrast */
+    background-color: rgba(0, 0, 0, 0.3); /* Darker overlay for better contrast */
     z-index: 1; 
 }
 
@@ -251,7 +251,7 @@ section {
     background-color: rgba(255, 255, 255, 0.1); /* Very subtle light background to lift it */
     border-radius: 8px;
     /* Soft, diffused shadow for a floating effect */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7); 
 }
 
 /* Also ensure the content wrapper collapses cleanly on mobile */
@@ -281,7 +281,7 @@ section {
     max-width: 100%;
     height: auto;
     border-radius: 10px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
 }
 
 
