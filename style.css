@@ -467,8 +467,8 @@ section {
 }
 
 .banner-text h1 {
-    font-size: 4em; /* Larger hero text */
-    font-weight: 900; 
+    font-size: 3em; /* Larger hero text */
+    font-weight: 500; 
     color: var(--color-accent-purple);
 }
 
