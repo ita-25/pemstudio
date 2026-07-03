@@ -8,6 +8,7 @@
 
 /* --- VARIABLES & RESET (Update these lines) --- */
 :root {
+    --color-black: #000000;
     --color-white: #FFFFFF;
     --color-accent-purple: #4527A0; /* NEW: Darker Indigo for CTAs and accents */
     --color-accent-blue: #2196F3; 
@@ -247,10 +248,10 @@ section {
 
     /* NEW: FLOATING EFFECT */
     padding: 30px; /* Crucial: Creates space between content and shadow edge */
-    background-color: rgba(255, 255, 255, 0.1); /* Very subtle light background to lift it */
+    background-color: rgba(255, 255, 255, 0.2); /* Very subtle light background to lift it */
     border-radius: 8px;
     /* Soft, diffused shadow for a floating effect */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
 }
 
 /* Also ensure the content wrapper collapses cleanly on mobile */
@@ -263,8 +264,8 @@ section {
 }
 
 .hero-text h1 {
-    font-size: 4em; /* Larger hero text */
-    font-weight: 900; 
+    font-size: 3em; /* Larger hero text */
+    font-weight: 800; 
     color: var(--color-white);
 }
 
@@ -273,7 +274,7 @@ section {
     font-size: 1.5em;
     font-weight: 300;
     margin-bottom: 30px;
-    color: var(--color-white); 
+    color: var(--color-black); 
 }
 
 .hero-image img {
