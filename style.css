@@ -232,7 +232,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
     z-index: 1; 
 }
 
@@ -247,7 +247,7 @@ section {
 
     /* NEW: FLOATING EFFECT */
     padding: 30px; /* Crucial: Creates space between content and shadow edge */
-    /*background-color: rgba(255, 255, 255, 0.1); /* Very subtle light background to lift it */
+    background-color: rgba(255, 255, 255, 0.1); /* Very subtle light background to lift it */
     border-radius: 8px;
     /* Soft, diffused shadow for a floating effect */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); 
