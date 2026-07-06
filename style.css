@@ -153,7 +153,7 @@ a {
 /* --- CALL TO ACTION BUTTONS (CTAs) - MODERNIZED --- */
 .cta-button, .cta-button-primary, .cta-button-secondary {
     display: inline-block;
-    padding: 14px 30px; /* INCREASED padding */
+    padding: 10px 20px; /* INCREASED padding */
     border-radius: 50px; /* PILL-SHAPE for modern aesthetic */
     font-weight: bold;
     text-transform: uppercase;
