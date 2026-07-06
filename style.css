@@ -233,7 +233,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay for better contrast */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
     z-index: 1; 
 }
 
