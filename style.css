@@ -30,7 +30,7 @@
 /* Also update the Mobile Nav background to the new gradient for consistency */
 .mobile-nav {
     /* ... other properties ... */
-    background: var(--color-white-); 
+    background: var(--color-rainbow-gradient); 
     /* ... rest of the properties ... */
 }
 
