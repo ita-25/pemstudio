@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About PEM Studio | Design, Development &amp; Partnership</title>
+<meta name="description" content="PEM Studio is a growing graphic design and digital presence studio in Lagos, Nigeria. Meet the team and see how we work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#151A2E;
+    --ink-soft:#2B3050;
+    --gold:#B98A3E;
+    --gold-soft:#DDBE86;
+    --paper:#FAF6EF;
+    --paper-line:#E7DFCF;
+    --text:#26241F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'Karla',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    color:var(--ink);
+    margin:0 0 .4em;
+    line-height:1.15;
+    font-weight:600;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  /* NAV */
+  header.site{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 6vw;
+    border-bottom:1px solid var(--paper-line);
+  }
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;text-decoration:none;color:var(--ink);}
+  nav.site a{
+    text-decoration:none;margin-left:28px;color:var(--ink-soft);font-size:.95rem;
+    border-bottom:1px solid transparent;padding-bottom:2px;
+  }
+  nav.site a:hover{border-color:var(--gold);}
+  nav.site{display:flex;}
+
+  /* HERO */
+  .hero{
+    padding:80px 6vw 60px;
+    max-width:900px;
+  }
+  .hero p.lede{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:clamp(1.4rem,2.6vw,1.9rem);
+    color:var(--ink-soft);
+    max-width:16ch;
+    margin:0 0 28px;
+  }
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);max-width:14ch;}
+
+  section{
+    padding:56px 6vw;
+    border-top:1px solid var(--paper-line);
+  }
+  .narrow{max-width:760px;}
+
+  /* TEAM */
+  .team{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:36px;
+    margin-top:32px;
+  }
+  .team article{
+    border-left:2px solid var(--gold);
+    padding-left:20px;
+  }
+  .team h3{font-size:1.25rem;margin-bottom:.15em;}
+  .team .role{
+    color:var(--gold);
+    font-family:'Karla',sans-serif;
+    font-weight:600;
+    font-size:.92rem;
+    margin-bottom:.6em;
+    display:block;
+  }
+  .team p{margin:0;color:var(--ink-soft);}
+
+  /* HUMAN TOUCH */
+  .human{background:var(--ink);color:var(--paper);}
+  .human h2{color:var(--paper);}
+  .human p{color:#D8D6E4;}
+  .human .narrow{max-width:720px;}
+
+  /* PARTNERSHIP / SERVICES */
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+  }
+  @media(max-width:760px){.split{grid-template-columns:1fr;}}
+  .split h2{font-size:1.6rem;}
+  .split p{color:var(--ink-soft);}
+
+  .cta-row{margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:2px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:.95rem;
+  }
+  .btn.primary{background:var(--ink);color:var(--paper);}
+  .btn.ghost{border:1px solid var(--ink);color:var(--ink);}
+
+  footer{
+    padding:48px 6vw 40px;
+    border-top:1px solid var(--paper-line);
+    font-size:.9rem;
+    color:var(--ink-soft);
+  }
+  footer .cols{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:24px;
+    margin-bottom:32px;
+  }
+  @media(max-width:700px){footer .cols{grid-template-columns:1fr;}}
+  footer h4{
+    font-family:'Karla',sans-serif;
+    font-weight:700;
+    font-size:.85rem;
+    color:var(--ink);
+    margin:0 0 12px;
+  }
+  footer ul{list-style:none;padding:0;margin:0;}
+  footer li{margin-bottom:8px;}
+  footer .bottom{border-top:1px solid var(--paper-line);padding-top:18px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="index.html">PEM Studio</a>
+  <nav class="site">
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="graphics.html">Gallery</a>
+    <a href="contact.html">Start Project</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p class="lede">Dream it. God will fund it. Bring it. We design it.</p>
+  <h1>We're PEM Studio &mdash; a design and digital presence studio built to make your vision real.</h1>
+</section>
+
+<section class="narrow">
+  <h2>Our story</h2>
+  <p>PEM Studio started as one designer's practice and has grown into a small, dedicated team. We still carry the same standard we started with &mdash; every project done properly, every detail considered &mdash; but now there are more of us to bring it to life, faster and better.</p>
+</section>
+
+<section>
+  <h2>Meet the team</h2>
+  <div class="team">
+    <article>
+      <h3>Paul Ejime Mormah</h3>
+      <span class="role">Founder &middot; Graphic Design &amp; Web Development</span>
+      <p>Blends visual identity with technical build, so your brand looks right and works right &mdash; from logo to live website.</p>
+    </article>
+    <article>
+      <h3>Nekky Mormah Aghedo</h3>
+      <span class="role">Co-Founder &middot; Graphic Designer</span>
+      <p>Brings sharp design instinct, skilled at using AI tools to design faster without losing quality or originality.</p>
+    </article>
+    <article>
+      <h3>Stanley Osifo</h3>
+      <span class="role">Co-Partner &middot; Graphic Designer &amp; Tech Enthusiast</span>
+      <p>Combines a strong design eye with a genuine curiosity for technology and where it's headed.</p>
+    </article>
+  </div>
+</section>
+
+<section class="human">
+  <div class="narrow">
+    <h2>Why the human touch still matters</h2>
+    <p>Design tools are faster and smarter than they've ever been. Anyone can prompt their way to a logo or a layout in seconds now. But a tool doesn't know your story, your customers, or the quiet reason you started your business in the first place &mdash; only you do, and only a designer who actually listens can translate that into something that looks and feels right.</p>
+    <p>That's where we come in. We use every modern tool available &mdash; AI included &mdash; because it would be foolish not to. But the taste, the judgment, the back-and-forth about what your brand should feel like, the eye that knows when a design is "almost there" versus actually done &mdash; that's still human work. Technology is only as good as the person using it. Without someone to give it direction and purpose, even the best tool just sits idle. We make sure it's worth something &mdash; for you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="split">
+    <div>
+      <h2>Open for partnership</h2>
+      <p>PEM Studio is growing, and we're open to bringing on partners and volunteers across design, social media management, and other digital skills, alongside our existing web development work. Partnership terms are clear and fair &mdash; reach out and we'll walk you through how it works, including how profit is shared depending on whether you bring the client or work on one of ours.</p>
+    </div>
+    <div>
+      <h2>Open for services</h2>
+      <p>Whether you need a single design, a full brand identity, or a website to match it, we're open for project work too. Get in touch and tell us what you're building.</p>
+    </div>
+  </div>
+  <div class="cta-row">
+    <a class="btn primary" href="contact.html">Start a Project</a>
+    <a class="btn ghost" href="contact.html">Partner With Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="cols">
+    <div>
+      <h4>PEM Studio</h4>
+      <p>Designs that inspire. High-quality graphics. Building digital presence.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="graphics.html">Gallery</a></li>
+        <li><a href="contact.html">Contact / Request</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get In Touch</h4>
+      <ul>
+        <li><a href="tel:+2348161202291">0816 120 2291</a></li>
+        <li><a href="mailto:pemstudz@gmail.com">pemstudz@gmail.com</a></li>
+        <li>Lagos, Nigeria</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom">&copy; 2025 PEM Studio. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
