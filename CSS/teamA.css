@@ -16,40 +16,6 @@
   --pem-line:#E4E0EA;
 }
 
-/* ---- Page banner (About hero) ---- */
-.page-banner{
-  padding:60px 6vw 40px;
-  background:var(--pem-paper);
-}
-.hero-content-wrapper{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:32px;
-  flex-wrap:wrap;
-}
-.banner-text h1{
-  font-family:'Playfair Display', serif;
-  font-weight:900;
-  color:var(--pem-navy);
-  font-size:clamp(2rem,4.4vw,3rem);
-  margin:0 0 .3em;
-}
-.banner-text p{
-  color:var(--pem-navy-soft);
-  font-size:1.05rem;
-  max-width:46ch;
-}
-.hero-image img{
-  max-width:220px;
-}
-
-.rainbow-divider{
-  height:4px;
-  margin:0 6vw;
-  background:linear-gradient(90deg,var(--pem-purple),var(--pem-purple-deep));
-  border-radius:4px;
-}
 
 /* ---- Story / bio block ---- */
 .bio-text-col{
@@ -198,27 +164,3 @@
 .cta-row .btn.ghost{border:2px solid var(--pem-navy);color:var(--pem-navy);}
 .cta-row .btn.ghost:hover{background:var(--pem-navy);color:#fff;}
 
-/* ---- Let's Connect band ---- */
-.contact-cta-block.accent-bg{
-  background:var(--pem-purple);
-  color:#fff;
-  text-align:center;
-  padding:56px 6vw;
-}
-.contact-cta-block .section-title{
-  font-family:'Playfair Display', serif;
-  color:#fff;
-  font-size:1.9rem;
-  margin-bottom:.2em;
-}
-.contact-cta-block .subtitle{
-  color:#EDE6FB;
-  margin-bottom:1.2em;
-}
-.contact-cta-block .cta-button-primary{
-  background:#fff;
-  color:var(--pem-purple-deep);
-}
-.contact-cta-block .cta-button-primary:hover{
-  background:var(--pem-lavender);
-}
