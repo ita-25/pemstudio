@@ -22,6 +22,7 @@
   padding:50px 6vw;
 }
 .special-content-box{
+  justify-content:center;
   max-width:760px;
 }
 .special-content-box h2{
