@@ -90,3 +90,22 @@
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
+
+/* ---- Why the human touch still matters ---- */
+.human{
+  background:var(--pem-navy);
+  color:#EDEBF7;
+  padding:56px 6vw;
+}
+.meet .narrow{max-width:700px;margin:0 auto;}
+.meet h2{
+  font-family:'Playfair Display', serif;
+  color:#fff;
+  font-size:1.8rem;
+  margin-bottom:.5em;
+}
+.meet p{
+  color:#C9C6E0;
+  line-height:1.7;
+  margin-bottom:1em;
+}
