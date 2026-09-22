@@ -882,3 +882,9 @@ main > .rainbow-divider {
         width: 100%; /* Full width buttons on small screen */
     }
 }
+
+.packages-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px; /* space between every card, horizontal and vertical */
+}
