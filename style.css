@@ -221,7 +221,7 @@ section {
     color: var(--color-white); 
 
     /* 1. CSS BACKGROUND IMAGE SETUP */
-    background: url('pemstudioflyer.png') no-repeat center center; 
+    background: url('MED/pemstudioflyer.png') no-repeat center center; 
     background-size: cover;
 }
 
