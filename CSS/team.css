@@ -120,3 +120,35 @@
 .read-more-link:hover{
   color:#5B27B8;
 }
+
+.pem-welcome{
+  position:fixed;
+  right:90px;            /* sits left of the float button; adjust if needed */
+  bottom:28px;
+  max-width:240px;
+  background:#fff;
+  color:#181736;
+  padding:14px 28px 14px 16px;
+  border-radius:14px 14px 4px 14px;
+  box-shadow:0 8px 24px rgba(24,23,54,.18);
+  font-size:.9rem;
+  line-height:1.4;
+  opacity:0;
+  transform:translateY(10px);
+  pointer-events:none;
+  transition:opacity .4s, transform .4s;
+  z-index:9999;
+}
+.pem-welcome.show{opacity:1;transform:translateY(0);pointer-events:auto;cursor:pointer;}
+.pem-welcome strong{display:block;color:#7B3FE4;margin-bottom:2px;}
+.pem-welcome-close{
+  position:absolute;top:4px;right:8px;
+  background:none;border:0;font-size:1.2rem;cursor:pointer;color:#888;
+}
+
+/* gentle pulse on the button to catch the eye */
+.pem-float-btn.attention{animation:pemPulse 1.6s ease-in-out 3;}
+@keyframes pemPulse{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+}
