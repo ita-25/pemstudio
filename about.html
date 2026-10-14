@@ -241,6 +241,36 @@
     e.preventDefault();
     chatWidget.classList.toggle('active');
   });
+
+    const welcome = document.getElementById('pemWelcome');
+const welcomeClose = document.getElementById('pemWelcomeClose');
+
+// Show once per visit, after 3 seconds
+if (!sessionStorage.getItem('pemWelcomeSeen')) {
+  setTimeout(() => {
+    welcome.classList.add('show');
+    floatBtn.classList.add('attention');
+    sessionStorage.setItem('pemWelcomeSeen', '1');
+    // auto-hide after 10 seconds
+    setTimeout(() => welcome.classList.remove('show'), 10000);
+  }, 3000);
+}
+
+// Clicking the bubble opens the team chat
+welcome.addEventListener('click', () => {
+  welcome.classList.remove('show');
+  chatWidget.classList.add('active');
+});
+
+// Close (×) button
+welcomeClose.addEventListener('click', (e) => {
+  e.stopPropagation();
+  welcome.classList.remove('show');
+});
+
+// Hide the bubble if they open the chat themselves
+floatBtn.addEventListener('click', () => welcome.classList.remove('show'));
+    
 </script>
     <script src="scripts.js"></script>
 </body>
