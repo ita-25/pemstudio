@@ -81,6 +81,30 @@
                         <i class="fas fa-download"></i>
                     </div>
                 </a>
+
+                <a href="MED/Peedesign Flyer1.jpg" download class="gallery-card">
+                    <img src="MED/Peedesign Flyer1.jpg" alt="Peedesign Flyer1">
+                    <div class="overlay">
+                        <p>PeeDesign Special Flyer</p>
+                        <i class="fas fa-download"></i>
+                    </div>
+                </a>
+
+                 <a href="MED/Peedesign Flyer2.jpg" download class="gallery-card">
+                    <img src="MED/Peedesign Flyer2.jpg" alt="Peedesign Flyer2">
+                    <div class="overlay">
+                        <p>PeeDesign Special Flyer</p>
+                        <i class="fas fa-download"></i>
+                    </div>
+                </a>
+
+                 <a href="MED/Peedesign Birthday Poster.jpg" download class="gallery-card">
+                    <img src="MED/Peedesign Birthday Poster.jpg" alt="Peedesign Birthday Poster">
+                    <div class="overlay">
+                        <p>PeeDesign Special Flyer</p>
+                        <i class="fas fa-download"></i>
+                    </div>
+                </a>
                 
                 <a href="flyer.png" download class="gallery-card">
                     <img src="flyer.png" alt="poster">
@@ -176,11 +200,18 @@
                 <small>0808 930 0846 - Sales & Support</small>
             </div>
         </a>
-        <a href="https://wa.me/2348168396608?text=Hello%20PEM%20Studio%2C%20I%20want%20to%20inquire%20about%20your%20graphics%20packages" target="_blank" class="team-btn team-2">
+        <a href="https://wa.me/2348168396608?text=Hello%20PEM%20Studio%2C%20I%20want%20to%20inquire%20about%20your%20graphics%20packages" target="_blank" class="team-btn team-1">
             <i class="fab fa-whatsapp"></i>
             <div>
                 <strong>Mrs. Nk</strong>
                 <small>0816 839 6608 - Manager</small>
+            </div>
+        </a>
+         <a href="https://wa.me/2348089467955?text=Hello%20PEM%20Studio%2C%20I%20want%20to%20inquire%20about%20your%20graphics%20packages" target="_blank" class="team-btn team-1">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+                <strong>Pee Design</strong>
+                <small>0808 946 7955 - Partner</small>
             </div>
         </a>
         <a href="https://www.pemstudio.com.ng/contact.html" class="team-btn form-btn">
@@ -205,6 +236,36 @@
     e.preventDefault();
     chatWidget.classList.toggle('active');
   });
+
+    const welcome = document.getElementById('pemWelcome');
+const welcomeClose = document.getElementById('pemWelcomeClose');
+
+// Show once per visit, after 3 seconds
+if (!sessionStorage.getItem('pemWelcomeSeen')) {
+  setTimeout(() => {
+    welcome.classList.add('show');
+    floatBtn.classList.add('attention');
+    sessionStorage.setItem('pemWelcomeSeen', '1');
+    // auto-hide after 10 seconds
+    setTimeout(() => welcome.classList.remove('show'), 10000);
+  }, 3000);
+}
+
+// Clicking the bubble opens the team chat
+welcome.addEventListener('click', () => {
+  welcome.classList.remove('show');
+  chatWidget.classList.add('active');
+});
+
+// Close (×) button
+welcomeClose.addEventListener('click', (e) => {
+  e.stopPropagation();
+  welcome.classList.remove('show');
+});
+
+// Hide the bubble if they open the chat themselves
+floatBtn.addEventListener('click', () => welcome.classList.remove('show'));
+    
     </script>
     <script src="scripts.js"></script>
 </body>
